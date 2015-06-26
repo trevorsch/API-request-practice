@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Pivotal Tracker Stories
+
+  p 
+    each story in stories
+      div
+        p Goal: 
+          =story.name
+        p Status: 
+          =story.current_state
+        p Difficulty: 
+          =story.estimate
