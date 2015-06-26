@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
   .header('X-TrackerToken', key)
   .end(function (response){
     res.render('index', {stories: response.body});
+    console.log(typeof response.body[0].estimate);
   });
 });
 

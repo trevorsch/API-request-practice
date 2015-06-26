@@ -10,5 +10,7 @@ block content
           =story.name
         p Status: 
           =story.current_state
-        p Difficulty: 
-          =story.estimate
+        p Difficulty:
+          div(class=(story.estimate === 1 ? "one" : story.estimate === 2 ? "two" : story.estimate === 3 ? "three" : undefined))
+            =story.estimate
+          
